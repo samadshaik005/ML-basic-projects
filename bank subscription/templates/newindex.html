@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bank loan  Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Diabetes Predictor</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+                <input class="form-input" type="text" name="duration" placeholder="duration eg. 1 to1000"><br>
+                <input class="form-input" type="text" name="pdays" placeholder="previous days campaign eg. 1 to 1000"><br>
+                <input class="form-input" type="text" name="poutcome" placeholder="outcome of the previous marketing campaign eg. 0 or 1"><br>
+                <input class="form-input" type="text" name="consumer_price_index" placeholder="consumer_price_index eg. 1 to 300"><br>
+                <input class="form-input" type="text" name="consumer_confidence_index" placeholder="consumer_confidence_index eg. 1 to 300"><br>
+                <input class="form-input" type="text" name="number_of_employees" placeholder="number_of_employees eg. 250"><br>
+                
+
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/samadshaik005/"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/samad-shaik-510054189/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>#sam.</p>
+       </div>
+
+    </body>
+</html>

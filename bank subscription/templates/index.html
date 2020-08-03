@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>BANK API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+
+<input type="text" name="duration" placeholder="duration" required="required" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="text" name="pdays" placeholder="outcome of the previous marketing campaign " required="required" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="text" name="poutcome" placeholder="outcome of the previous marketing campaign " required="required" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <input type="text" name="consumer_price_index" placeholder="consumer price index" required="required" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <input type="text" name="consumer_confidence_index" placeholder="consumer confidence index" required="required" />&nbsp;&nbsp;&nbsp;&nbsp;
+
+ 
+        <input type="text" name="number_of_employees" placeholder="number of employees" required="required" /><br><br><br>
+
+  
+
+
+      
+
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button></button>
+    </form>
+
+   <br>
+   <br>
+
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
